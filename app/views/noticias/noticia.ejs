@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portal de Notícias</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+										<a href="/"><img src="images/logo.png" /></a>
+									<ul class="icons">
+										<li><a href="/form_add_noticia">CADASTRAR NOTÍCIA</a></li>
+									</ul>
+								</header>
+
+	    <div class="container">
+	    	<div class="row">
+	    		<div class="col-md-12">
+	    			<div class="noticia_wrapper">
+		    			<span class="noticia_autor"><%= noticia[0].autor %></span>
+		    			<a class="noticia_titulo"><%= noticia[0].titulo %></a>
+		    			<p class="noticia_data"><%= noticia[0].data_noticia %></p>
+						<p class="noticia_resumo"><%= noticia[0].noticia %></p>
+		    		</div>
+		    	</div>
+	    	</div>
+	    </div>
+
+
+		<!-- Scripts -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/browser.min.js"></script>
+		<script src="js/breakpoints.min.js"></script>
+		<script src="js/util.js"></script>
+		<script src="js/main.js"></script>
+
+</body>
+</html>

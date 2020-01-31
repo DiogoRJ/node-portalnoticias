@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Portal de Notícias</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="css/main.css" />
+		<!-- favicon -->
+		<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+										<a href="/"><img src="images/logo.png" /></a>
+									<ul class="icons">
+										<li><a href="/form_add_noticia">CADASTRAR NOTÍCIA</a></li>
+									</ul>
+								</header>
+
+							<!-- Section -->
+							<section>
+									<div class="features">
+									<% for(var i=0; i < noticias.length; i++) { %>
+										<article>
+											<div class="content">
+												<h3><a href="noticia?id_noticia=<%= noticias[i].id_noticia %>" class="noticia_titulo"><%= noticias[i].titulo %></a></h3>
+												<span class="noticia_autor"><%= noticias[i].autor %></span>
+												<p class="noticia_data"><%= noticias[i].data_noticia %></p>
+												<p class="noticia_resumo"><%= noticias[i].resumo %></p>
+												<ul class="actions">
+														<li><a href="noticia?id_noticia=<%= noticias[i].id_noticia %>" class="button big">Leia Mais</a></li>
+													</ul>
+											</div>											
+										</article>
+										<% } %>
+										
+
+									</div>
+								</section>
+
+
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+					<div id="sidebar">
+						<div class="inner">
+
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="/">Home</a></li>
+										<li><a href="/form_add_noticia">Cadastrar Notícia</a></li>
+										<li><a href="/noticias">Todas Notícias</a></li>
+
+									</ul>
+								</nav>
+
+
+							<!-- Footer -->
+
+
+						</div>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js"></script>
+			<script src="js/browser.min.js"></script>
+			<script src="js/breakpoints.min.js"></script>
+			<script src="js/util.js"></script>
+			<script src="js/main.js"></script>
+
+	</body>
+</html>
